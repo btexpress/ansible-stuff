@@ -1,0 +1,13 @@
+---
+
+- hosts: ilo
+  connection: local
+
+  tasks:
+    - name: HP ILO testing
+      hpilo_boot: 
+        host: <iloservername>
+        login: Administrator
+        password: <password>
+        media: network
+        state: boot_once
